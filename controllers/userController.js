@@ -78,7 +78,28 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+// @desc    Delete user
+// @route   DELETE /api/users/:id
+// @access  Private
+const deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({ message: 'משתמש לא נמצא.' });
+    }
+
+    await user.deleteOne();
+
+    res.json({ message: 'המשתמש נמחק בהצלחה.' });
+  } catch (error) {
+    console.error('שגיאה במחיקת משתמש:', error);
+    next(error);
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
+  deleteUser,
 };
