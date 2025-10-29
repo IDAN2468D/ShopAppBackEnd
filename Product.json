@@ -1,0 +1,1224 @@
+{
+    "status": "success",
+    "timestamp": "2025-10-23T12:33:00Z",
+    "totalProducts": 40,
+    "totalCategories": 5,
+    "categories": [
+        "אלקטרוניקה",
+        "אופנה",
+        "בית ומטבח",
+        "ספורט וכושר",
+        "ספרים וצעצועים"
+    ],
+    "source": "Unsplash - Real Stock Images",
+    "imageFormat": "JPEG and PNG supported",
+    "imageSizes": [
+        "thumbnail (300px)",
+        "small (600px)",
+        "medium (1200px)",
+        "large (1920px)",
+        "original"
+    ],
+    "products": [
+        {
+            "productId": "prod_0001",
+            "name": "סמארטפון iPhone 15 Pro",
+            "description": "סמארטפון פרימיום עם מצלמה מתקדמת ומעבד A17 Pro",
+            "category": "אלקטרוניקה",
+            "price": 4500,
+            "currency": "ILS",
+            "stock": 15,
+            "inStock": true,
+            "rating": 4.8,
+            "reviewsCount": 245,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1592286927505-1def25115558?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1592286927505-1def25115558?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1592286927505-1def25115558?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1592286927505-1def25115558?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1592286927505-1def25115558?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_001",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0002",
+            "name": "מחשב נייד MacBook Air M3",
+            "description": "מחשב נייד עם מעבד M3 חזק וסוללה ארוכה",
+            "category": "אלקטרוניקה",
+            "price": 5999,
+            "currency": "ILS",
+            "stock": 8,
+            "inStock": true,
+            "rating": 4.9,
+            "reviewsCount": 189,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_002",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0003",
+            "name": "אוזניות אלחוטיות AirPods Pro",
+            "description": "אוזניות עם ביטול רעש פעיל ותאימות מעולה",
+            "category": "אלקטרוניקה",
+            "price": 1299,
+            "currency": "ILS",
+            "stock": 42,
+            "inStock": true,
+            "rating": 4.7,
+            "reviewsCount": 312,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_003",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0004",
+            "name": "טאבלט iPad Air",
+            "description": "טאבלט עם מסך יפה וביצועים מצוינים",
+            "category": "אלקטרוניקה",
+            "price": 2799,
+            "currency": "ILS",
+            "stock": 12,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 156,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_001",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0005",
+            "name": "שעון חכם Apple Watch Series 9",
+            "description": "שעון חכם עם מעקב בריאות מתקדם",
+            "category": "אלקטרוניקה",
+            "price": 1899,
+            "currency": "ILS",
+            "stock": 25,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 178,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_002",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0006",
+            "name": "מסך מחשב 4K Dell 27 אינץ'",
+            "description": "מסך גבוה הרזולוציה למקצועיים",
+            "category": "אלקטרוניקה",
+            "price": 2199,
+            "currency": "ILS",
+            "stock": 7,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 95,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_003",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 5
+            }
+        },
+        {
+            "productId": "prod_0007",
+            "name": "מקלדת מכנית Logitech MX",
+            "description": "מקלדת מכנית עוצמתית וקטנה",
+            "category": "אלקטרוניקה",
+            "price": 399,
+            "currency": "ILS",
+            "stock": 34,
+            "inStock": true,
+            "rating": 4.3,
+            "reviewsCount": 78,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1587829191301-e8e0b3d6b4c5?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1587829191301-e8e0b3d6b4c5?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1587829191301-e8e0b3d6b4c5?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1587829191301-e8e0b3d6b4c5?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1587829191301-e8e0b3d6b4c5?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_001",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0008",
+            "name": "עכבר אלחוטי Logitech MX Master 3",
+            "description": "עכבר אלחוטי מתקדם עם כפתורים ניתנים לתכנות",
+            "category": "אלקטרוניקה",
+            "price": 349,
+            "currency": "ILS",
+            "stock": 28,
+            "inStock": true,
+            "rating": 4.2,
+            "reviewsCount": 62,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_002",
+                "name": "חנות אלקטרוניקה",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0009",
+            "name": "חולצת פולו לגברים",
+            "description": "חולצת פולו איכותית ונוחה",
+            "category": "אופנה",
+            "price": 299,
+            "currency": "ILS",
+            "stock": 67,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 134,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1578688946199-22f63d1e4906?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1578688946199-22f63d1e4906?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1578688946199-22f63d1e4906?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1578688946199-22f63d1e4906?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1578688946199-22f63d1e4906?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_004",
+                "name": "חנות אופנה",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0010",
+            "name": "ג'ינס Levi's 501",
+            "description": "ג'ינס קלאסי וכל הזמן",
+            "category": "אופנה",
+            "price": 449,
+            "currency": "ILS",
+            "stock": 55,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 201,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_005",
+                "name": "חנות אופנה",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0011",
+            "name": "נעלי ספורט Nike Air Max",
+            "description": "נעלי ספורט נוחות וסטיליות",
+            "category": "אופנה",
+            "price": 599,
+            "currency": "ILS",
+            "stock": 38,
+            "inStock": true,
+            "rating": 4.7,
+            "reviewsCount": 267,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_004",
+                "name": "חנות אופנה",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0012",
+            "name": "מעיל ג'ינס קלאסי",
+            "description": "מעיל ג'ינס קלאסי וחזק",
+            "category": "אופנה",
+            "price": 379,
+            "currency": "ILS",
+            "stock": 42,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 88,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1550639525-c97814a27389?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1550639525-c97814a27389?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1550639525-c97814a27389?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1550639525-c97814a27389?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1550639525-c97814a27389?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_005",
+                "name": "חנות אופנה",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0013",
+            "name": "שמלת ערב אלגנטית",
+            "description": "שמלה אלגנטית ויפה לאירוע",
+            "category": "אופנה",
+            "price": 799,
+            "currency": "ILS",
+            "stock": 19,
+            "inStock": true,
+            "rating": 4.8,
+            "reviewsCount": 156,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1595608866882-8a6b2d0b9c4e?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1595608866882-8a6b2d0b9c4e?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1595608866882-8a6b2d0b9c4e?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1595608866882-8a6b2d0b9c4e?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1595608866882-8a6b2d0b9c4e?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_006",
+                "name": "חנות אופנה פרימיום",
+                "rating": 4.95
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0014",
+            "name": "תיק עור איטלקי",
+            "description": "תיק עור איטלקי איכותי",
+            "category": "אופנה",
+            "price": 899,
+            "currency": "ILS",
+            "stock": 11,
+            "inStock": true,
+            "rating": 4.9,
+            "reviewsCount": 223,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_006",
+                "name": "חנות אופנה פרימיום",
+                "rating": 4.95
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0015",
+            "name": "משקפי שמש Ray-Ban",
+            "description": "משקפי שמש קלאסיים וסטיליים",
+            "category": "אופנה",
+            "price": 449,
+            "currency": "ILS",
+            "stock": 76,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 312,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1527570519437-6d6b92a6c0f7?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1527570519437-6d6b92a6c0f7?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1527570519437-6d6b92a6c0f7?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1527570519437-6d6b92a6c0f7?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1527570519437-6d6b92a6c0f7?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_005",
+                "name": "חנות אופנה",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0016",
+            "name": "חגורת עור מעוצבת",
+            "description": "חגורה עור מעוצבת ועמידה",
+            "category": "אופנה",
+            "price": 199,
+            "currency": "ILS",
+            "stock": 89,
+            "inStock": true,
+            "rating": 4.3,
+            "reviewsCount": 67,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_004",
+                "name": "חנות אופנה",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0017",
+            "name": "מכונת קפה Nespresso",
+            "description": "מכונת קפה קומפקטית וקלה בשימוש",
+            "category": "בית ומטבח",
+            "price": 899,
+            "currency": "ILS",
+            "stock": 22,
+            "inStock": true,
+            "rating": 4.7,
+            "reviewsCount": 189,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_007",
+                "name": "חנות בית וגן",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 5
+            }
+        },
+        {
+            "productId": "prod_0018",
+            "name": "מיקסר KitchenAid",
+            "description": "מיקסר חזק לכל סוגי בישול",
+            "category": "בית ומטבח",
+            "price": 1299,
+            "currency": "ILS",
+            "stock": 15,
+            "inStock": true,
+            "rating": 4.8,
+            "reviewsCount": 145,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_008",
+                "name": "חנות מטבח",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0019",
+            "name": "סט סכינים מקצועי",
+            "description": "סט סכינים איכותי למטבח",
+            "category": "בית ומטבח",
+            "price": 549,
+            "currency": "ILS",
+            "stock": 33,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 112,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_007",
+                "name": "חנות בית וגן",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0020",
+            "name": "מחבת אנטי-דביקה",
+            "description": "מחבת איכותית ועמידה",
+            "category": "בית ומטבח",
+            "price": 149,
+            "currency": "ILS",
+            "stock": 56,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 89,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_008",
+                "name": "חנות מטבח",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0021",
+            "name": "סט כלי אוכל 24 חלקים",
+            "description": "סט כלי אוכל מלא לכל משפחה",
+            "category": "בית ומטבח",
+            "price": 349,
+            "currency": "ILS",
+            "stock": 28,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 134,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_007",
+                "name": "חנות בית וגן",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0022",
+            "name": "מעבד מזון Philips",
+            "description": "מעבד מזון חזק וקל בשימוש",
+            "category": "בית ומטבח",
+            "price": 429,
+            "currency": "ILS",
+            "stock": 19,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 98,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1584568694244-14fbbc50d737?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1584568694244-14fbbc50d737?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1584568694244-14fbbc50d737?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1584568694244-14fbbc50d737?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1584568694244-14fbbc50d737?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_008",
+                "name": "חנות מטבח",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0023",
+            "name": "קומקום חשמלי",
+            "description": "קומקום חשמלי מהיר וחסכוני",
+            "category": "בית ומטבח",
+            "price": 99,
+            "currency": "ILS",
+            "stock": 72,
+            "inStock": true,
+            "rating": 4.2,
+            "reviewsCount": 76,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_007",
+                "name": "חנות בית וגן",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0024",
+            "name": "טוסטר 4 פרוסות",
+            "description": "טוסטר מודרני ודיוק תבשיל",
+            "category": "בית ומטבח",
+            "price": 179,
+            "currency": "ILS",
+            "stock": 44,
+            "inStock": true,
+            "rating": 4.3,
+            "reviewsCount": 102,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_008",
+                "name": "חנות מטבח",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0025",
+            "name": "מזרן יוגה מקצועי",
+            "description": "מזרן יוגה עבה ונוח",
+            "category": "ספורט וכושר",
+            "price": 199,
+            "currency": "ILS",
+            "stock": 89,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 123,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_009",
+                "name": "חנות ספורט",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0026",
+            "name": "משקולות 2-10 ק״ג",
+            "description": "סט משקולות להתרנינות",
+            "category": "ספורט וכושר",
+            "price": 299,
+            "currency": "ILS",
+            "stock": 54,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 167,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1532473361331-11feea42e38d?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1532473361331-11feea42e38d?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1532473361331-11feea42e38d?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1532473361331-11feea42e38d?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1532473361331-11feea42e38d?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_010",
+                "name": "חנות כושר",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 4
+            }
+        },
+        {
+            "productId": "prod_0027",
+            "name": "חבל קפיצה",
+            "description": "חבל קפיצה קל ועמיד",
+            "category": "ספורט וכושר",
+            "price": 79,
+            "currency": "ILS",
+            "stock": 95,
+            "inStock": true,
+            "rating": 4.1,
+            "reviewsCount": 54,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1540497077202-7361215aebb8?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1540497077202-7361215aebb8?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1540497077202-7361215aebb8?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1540497077202-7361215aebb8?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1540497077202-7361215aebb8?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_009",
+                "name": "חנות ספורט",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0028",
+            "name": "כדור כושר 65 ס״מ",
+            "description": "כדור כושר מאומת ובטוח",
+            "category": "ספורט וכושר",
+            "price": 89,
+            "currency": "ILS",
+            "stock": 68,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 145,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_010",
+                "name": "חנות כושר",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0029",
+            "name": "רצועות התנגדות",
+            "description": "רצועות התנגדות קלות קיבולת",
+            "category": "ספורט וכושר",
+            "price": 59,
+            "currency": "ILS",
+            "stock": 112,
+            "inStock": true,
+            "rating": 4.3,
+            "reviewsCount": 89,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1509041957745-24861b214201?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1509041957745-24861b214201?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1509041957745-24861b214201?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1509041957745-24861b214201?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1509041957745-24861b214201?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_009",
+                "name": "חנות ספורט",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0030",
+            "name": "בקבוק מים 1 ליטר",
+            "description": "בקבוק מים מבודד תרמי",
+            "category": "ספורט וכושר",
+            "price": 49,
+            "currency": "ILS",
+            "stock": 156,
+            "inStock": true,
+            "rating": 4.2,
+            "reviewsCount": 103,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_010",
+                "name": "חנות כושר",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 1
+            }
+        },
+        {
+            "productId": "prod_0031",
+            "name": "נעלי ריצה Adidas Ultraboost",
+            "description": "נעלי ריצה נוחות וקלות",
+            "category": "ספורט וכושר",
+            "price": 699,
+            "currency": "ILS",
+            "stock": 31,
+            "inStock": true,
+            "rating": 4.7,
+            "reviewsCount": 234,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_009",
+                "name": "חנות ספורט",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0032",
+            "name": "שעון ספורט Garmin",
+            "description": "שעון ספורט חכם עם GPS",
+            "category": "ספורט וכושר",
+            "price": 1199,
+            "currency": "ILS",
+            "stock": 18,
+            "inStock": true,
+            "rating": 4.8,
+            "reviewsCount": 198,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_010",
+                "name": "חנות כושר",
+                "rating": 4.8
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0033",
+            "name": "סט לגו ארכיטקטורה",
+            "description": "סט לגו בנייה ארכיטקטורה",
+            "category": "ספרים וצעצועים",
+            "price": 399,
+            "currency": "ILS",
+            "stock": 41,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 178,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1595394317421-5a71835b7f0d?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1595394317421-5a71835b7f0d?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1595394317421-5a71835b7f0d?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1595394317421-5a71835b7f0d?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1595394317421-5a71835b7f0d?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_011",
+                "name": "חנות צעצועים",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0034",
+            "name": "פאזל 1000 חלקים",
+            "description": "פאזל קשה וייחודי",
+            "category": "ספרים וצעצועים",
+            "price": 99,
+            "currency": "ILS",
+            "stock": 73,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 121,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_012",
+                "name": "חנות משחקים",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0035",
+            "name": "משחק קופסה Catan",
+            "description": "משחק קופסה קלאסי וכיפי",
+            "category": "ספרים וצעצועים",
+            "price": 149,
+            "currency": "ILS",
+            "stock": 27,
+            "inStock": true,
+            "rating": 4.7,
+            "reviewsCount": 256,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_012",
+                "name": "חנות משחקים",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0036",
+            "name": "ספר הארי פוטר הסט המלא",
+            "description": "סט 7 ספרים הארי פוטר",
+            "category": "ספרים וצעצועים",
+            "price": 299,
+            "currency": "ILS",
+            "stock": 35,
+            "inStock": true,
+            "rating": 4.9,
+            "reviewsCount": 389,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_013",
+                "name": "חנות ספרים",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": true,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0037",
+            "name": "בובת תינוק אינטראקטיבית",
+            "description": "בובה אינטראקטיבית מדברת",
+            "category": "ספרים וצעצועים",
+            "price": 179,
+            "currency": "ILS",
+            "stock": 52,
+            "inStock": true,
+            "rating": 4.3,
+            "reviewsCount": 95,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1595777712802-73e9a0e63dbc?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1595777712802-73e9a0e63dbc?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1595777712802-73e9a0e63dbc?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1595777712802-73e9a0e63dbc?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1595777712802-73e9a0e63dbc?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_011",
+                "name": "חנות צעצועים",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0038",
+            "name": "רכב על שלט",
+            "description": "רכב על שלט ריחוק",
+            "category": "ספרים וצעצועים",
+            "price": 249,
+            "currency": "ILS",
+            "stock": 46,
+            "inStock": true,
+            "rating": 4.5,
+            "reviewsCount": 156,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1589479518068-4de7e1907f3f?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1589479518068-4de7e1907f3f?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1589479518068-4de7e1907f3f?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1589479518068-4de7e1907f3f?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1589479518068-4de7e1907f3f?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_011",
+                "name": "חנות צעצועים",
+                "rating": 4.85
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 3
+            }
+        },
+        {
+            "productId": "prod_0039",
+            "name": "ערכת ציור מקצועית",
+            "description": "ערכת ציור מקצועית למקצוענים",
+            "category": "ספרים וצעצועים",
+            "price": 129,
+            "currency": "ILS",
+            "stock": 68,
+            "inStock": true,
+            "rating": 4.4,
+            "reviewsCount": 102,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_012",
+                "name": "חנות משחקים",
+                "rating": 4.75
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        },
+        {
+            "productId": "prod_0040",
+            "name": "קלפי משחק פוקמון",
+            "description": "קלפי קלקטיביים פוקמון",
+            "category": "ספרים וצעצועים",
+            "price": 89,
+            "currency": "ILS",
+            "stock": 94,
+            "inStock": true,
+            "rating": 4.6,
+            "reviewsCount": 267,
+            "images": {
+                "main": {
+                    "original": "https://images.unsplash.com/photo-1611827617242-c1c1dacd4fed?w=1920&h=1920",
+                    "thumbnail": "https://images.unsplash.com/photo-1611827617242-c1c1dacd4fed?w=300&h=300",
+                    "small": "https://images.unsplash.com/photo-1611827617242-c1c1dacd4fed?w=600&h=600",
+                    "medium": "https://images.unsplash.com/photo-1611827617242-c1c1dacd4fed?w=1200&h=1200",
+                    "large": "https://images.unsplash.com/photo-1611827617242-c1c1dacd4fed?w=1920&h=1920"
+                }
+            },
+            "seller": {
+                "sellerId": "seller_013",
+                "name": "חנות ספרים",
+                "rating": 4.9
+            },
+            "shipping": {
+                "freeShipping": false,
+                "estimatedDays": 2
+            }
+        }
+    ]
+}
