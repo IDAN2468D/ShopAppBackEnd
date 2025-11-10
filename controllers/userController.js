@@ -2,7 +2,11 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const axios = require('axios');
+const MailerLite = require('@mailerlite/mailerlite-nodejs');
+
+const mailerlite = new MailerLite({
+  apiKey: process.env.MAILERLITE_API_KEY, // API Key מ-MailerLite
+});
 
 // Generate JWT Token
 const generateToken = (id) => {
@@ -96,7 +100,7 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-// @desc    Forgot password using MailerLite API
+// @desc    Forgot password using MailerLite SDK
 // @route   POST /api/users/forgotpassword
 // @access  Public
 const forgotPassword = async (req, res, next) => {
@@ -110,46 +114,30 @@ const forgotPassword = async (req, res, next) => {
 
     // Generate reset token
     const resetToken = crypto.randomBytes(20).toString('hex');
-    user.resetPasswordToken = crypto
-      .createHash('sha256')
-      .update(resetToken)
-      .digest('hex');
+    user.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 דקות
-
     await user.save({ validateBeforeSave: false });
 
     const resetURL = `${req.protocol}://${req.get('host')}/api/users/resetpassword/${resetToken}`;
     const message = `קיבלת אימייל זה מכיוון שביקשת לאפס את הסיסמה שלך. אנא בקר בקישור הבא: \n\n ${resetURL} \n\n אם לא ביקשת זאת, אנא התעלם מאימייל זה.`;
 
-    try {
-      await axios.post(
-        'https://connect.mailerlite.com/api/v2/email/send',
-        {
-          subject: 'איפוס סיסמה',
-          from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
-          recipients: [{ email: user.email }],
-          html: `<p>${message}</p>`,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'X-MailerLite-ApiKey': process.env.EMAIL_PASSWORD,
-          },
-        }
-      );
+    // Send email via MailerLite SDK
+    await mailerlite.transactionalEmails.send({
+      subject: 'איפוס סיסמה',
+      from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
+      to: [{ email: user.email }],
+      html: `<p>${message}</p>`,
+    });
 
-      res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
-    } catch (error) {
-      // Reset token if sending fails
-      user.resetPasswordToken = undefined;
-      user.resetPasswordExpire = undefined;
-      await user.save({ validateBeforeSave: false });
-
-      console.error('שגיאה בשליחת אימייל איפוס סיסמה:', error.response?.data || error.message);
-      return res.status(500).json({ message: 'שגיאה בשליחת אימייל איפוס סיסמה.' });
-    }
+    res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
   } catch (error) {
-    next(error);
+    // Reset token if sending fails
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+    await user.save({ validateBeforeSave: false });
+
+    console.error('שגיאה בשליחת אימייל איפוס סיסמה:', error.message);
+    return res.status(500).json({ message: 'שגיאה בשליחת אימייל איפוס סיסמה.' });
   }
 };
 
@@ -158,10 +146,7 @@ const forgotPassword = async (req, res, next) => {
 // @access  Public
 const resetPassword = async (req, res, next) => {
   try {
-    const resetPasswordToken = crypto
-      .createHash('sha256')
-      .update(req.params.resettoken)
-      .digest('hex');
+    const resetPasswordToken = crypto.createHash('sha256').update(req.params.resettoken).digest('hex');
 
     const user = await User.findOne({
       resetPasswordToken,
