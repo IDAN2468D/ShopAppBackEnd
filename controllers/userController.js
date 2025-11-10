@@ -169,9 +169,11 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
+console.log('deleteUser type in userController:', typeof deleteUser);
 module.exports = {
   registerUser,
   loginUser,
+  deleteUser,
   forgotPassword,
   resetPassword,
 };
