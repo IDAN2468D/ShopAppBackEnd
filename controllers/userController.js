@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const MailerLite = require('@mailerlite/mailerlite-nodejs');
 
-const mailerlite = new MailerLite({
+const mailerlite = MailerLite.init({
   apiKey: process.env.MAILERLITE_API_KEY, // API Key מ-MailerLite
 });
 
