@@ -2,11 +2,7 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const MailerLite = require('@mailerlite/mailerlite-nodejs').default;
-
-const mailerlite = new MailerLite({
-  apiKey: process.env.MAILERLITE_API_KEY, // API Key מ-MailerLite
-});
+const axios = require('axios');
 
 // Generate JWT Token
 const generateToken = (id) => {
@@ -100,11 +96,11 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-// @desc    Forgot password using MailerLite SDK
+// @desc    Forgot password using MailerSend
 // @route   POST /api/users/forgotpassword
 // @access  Public
 const forgotPassword = async (req, res, next) => {
-  let user; // <-- הגדרה מחוץ ל-try כדי שתהיה גישה גם ב-catch
+  let user;
   try {
     const { email } = req.body;
 
@@ -122,13 +118,31 @@ const forgotPassword = async (req, res, next) => {
     const resetURL = `${req.protocol}://${req.get('host')}/api/users/resetpassword/${resetToken}`;
     const message = `קיבלת אימייל זה מכיוון שביקשת לאפס את הסיסמה שלך. אנא בקר בקישור הבא: \n\n ${resetURL} \n\n אם לא ביקשת זאת, אנא התעלם מאימייל זה.`;
 
-    // Send email via MailerLite SDK
-    await mailerlite.emails.send({
-      subject: 'איפוס סיסמה',
-      from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
-      to: [{ email: user.email }],
-      html: `<p>${message}</p>`,
-    });
+    // Send email via MailerSend
+    await axios.post(
+      'https://api.mailersend.com/v1/email',
+      {
+        from: {
+          email: process.env.EMAIL_FROM, // חייב להיות דומיין מאומת
+          name: 'האפליקציה שלי',
+        },
+        to: [
+          {
+            email: user.email,
+            name: user.name,
+          },
+        ],
+        subject: 'איפוס סיסמה',
+        text: message,
+        html: `<p>${message}</p>`,
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${process.env.MAILERSEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
   } catch (error) {
