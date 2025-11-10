@@ -24,8 +24,6 @@ const UserSchema = mongoose.Schema({
   resetPasswordExpire: Date,
 }, { timestamps: true });
 
-module.exports = mongoose.model('User', UserSchema);
-
 UserSchema.methods.getResetPasswordToken = function () {
   // Generate token
   const resetToken = crypto.randomBytes(20).toString('hex');
@@ -38,3 +36,5 @@ UserSchema.methods.getResetPasswordToken = function () {
 
   return resetToken;
 };
+
+module.exports = mongoose.model('User', UserSchema);
