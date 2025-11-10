@@ -6,5 +6,7 @@ const { protect } = require('../middleware/authMiddleware');
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 router.delete('/:id', protect, deleteUser);
+router.post('/forgotpassword', forgotPassword);
+router.put('/resetpassword/:resettoken', resetPassword);
 
 module.exports = router;
