@@ -104,10 +104,11 @@ const deleteUser = async (req, res, next) => {
 // @route   POST /api/users/forgotpassword
 // @access  Public
 const forgotPassword = async (req, res, next) => {
+  let user; // <-- הגדרה מחוץ ל-try כדי שתהיה גישה גם ב-catch
   try {
     const { email } = req.body;
 
-    const user = await User.findOne({ email });
+    user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: 'משתמש לא נמצא עם כתובת אימייל זו.' });
     }
@@ -132,10 +133,11 @@ const forgotPassword = async (req, res, next) => {
     res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
   } catch (error) {
     // Reset token if sending fails
-    user.resetPasswordToken = undefined;
-    user.resetPasswordExpire = undefined;
-    await user.save({ validateBeforeSave: false });
-
+    if (user) {
+      user.resetPasswordToken = undefined;
+      user.resetPasswordExpire = undefined;
+      await user.save({ validateBeforeSave: false });
+    }
     console.error('שגיאה בשליחת אימייל איפוס סיסמה:', error.message);
     return res.status(500).json({ message: 'שגיאה בשליחת אימייל איפוס סיסמה.' });
   }
