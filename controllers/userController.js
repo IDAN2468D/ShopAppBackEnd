@@ -125,9 +125,9 @@ const forgotPassword = async (req, res, next) => {
 
     try {
       const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // true for 465, false for other ports
+        host: 'smtp.mailerlite.com',
+        port: 587,
+        secure: false, // true for false, false for other ports
         auth: {
           user: process.env.EMAIL_USERNAME,
           pass: process.env.EMAIL_PASSWORD,
