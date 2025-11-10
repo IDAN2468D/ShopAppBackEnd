@@ -36,29 +36,24 @@ const registerUser = async (req, res, next) => {
       password: hashedPassword,
     });
 
-    if (user) {
-      res.status(201).json({
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        token: generateToken(user._id),
-      });
-    } else {
-      res.status(400).json({ message: 'נתונים לא חוקיים של משתמש.' });
-    }
+    res.status(201).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+    });
   } catch (error) {
     console.error('שגיאה ברישום משתמש:', error);
     next(error);
   }
 };
 
-// @desc    Authenticate user & get token
+// @desc    Login user
 // @route   POST /api/users/login
 // @access  Public
 const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-
     const user = await User.findOne({ email });
 
     if (user && (await bcrypt.compare(password, user.password))) {
@@ -77,34 +72,14 @@ const loginUser = async (req, res, next) => {
   }
 };
 
-// @desc    Delete user
-// @route   DELETE /api/users/:id
-// @access  Private
-const deleteUser = async (req, res, next) => {
-  try {
-    const user = await User.findById(req.params.id);
-
-    if (!user) {
-      return res.status(404).json({ message: 'משתמש לא נמצא.' });
-    }
-
-    await user.deleteOne();
-    res.json({ message: 'המשתמש נמחק בהצלחה.' });
-  } catch (error) {
-    console.error('שגיאה במחיקת משתמש:', error);
-    next(error);
-  }
-};
-
-// @desc    Forgot password using MailerSend
+// @desc    Forgot password using MailerSend API
 // @route   POST /api/users/forgotpassword
 // @access  Public
 const forgotPassword = async (req, res, next) => {
-  let user;
   try {
     const { email } = req.body;
 
-    user = await User.findOne({ email });
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: 'משתמש לא נמצא עם כתובת אימייל זו.' });
     }
@@ -116,44 +91,48 @@ const forgotPassword = async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
     const resetURL = `${req.protocol}://${req.get('host')}/api/users/resetpassword/${resetToken}`;
-    const message = `קיבלת אימייל זה מכיוון שביקשת לאפס את הסיסמה שלך. אנא בקר בקישור הבא: \n\n ${resetURL} \n\n אם לא ביקשת זאת, אנא התעלם מאימייל זה.`;
+    const htmlMessage = `
+      <p>קיבלת אימייל זה מכיוון שביקשת לאפס את הסיסמה שלך.</p>
+      <p>אנא לחץ על הקישור הבא כדי לאפס את הסיסמה:</p>
+      <a href="${resetURL}">${resetURL}</a>
+      <p>אם לא ביקשת זאת, התעלם מאימייל זה.</p>
+    `;
 
-    // Send email via MailerSend
-    await axios.post(
-      'https://api.mailersend.com/v1/email',
-      {
-        from: {
-          email: process.env.EMAIL_FROM, // חייב להיות דומיין מאומת
-          name: 'האפליקציה שלי',
+    // Send email via MailerSend API
+    try {
+      await axios.post(
+        'https://api.mailersend.com/v1/email',
+        {
+          from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
+          to: [{ email: user.email }],
+          subject: 'איפוס סיסמה',
+          html: htmlMessage,
         },
-        to: [
-          {
-            email: user.email,
-            name: user.name,
+        {
+          headers: {
+            'Authorization': `Bearer ${process.env.MAILERSEND_API_KEY}`,
+            'Content-Type': 'application/json',
           },
-        ],
-        subject: 'איפוס סיסמה',
-        text: message,
-        html: `<p>${message}</p>`,
-      },
-      {
-        headers: {
-          'Authorization': `Bearer ${process.env.MAILERSEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+        }
+      );
 
-    res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
-  } catch (error) {
-    // Reset token if sending fails
-    if (user) {
+      res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
+    } catch (mailError) {
+      console.error('שגיאה בשליחת אימייל איפוס סיסמה:', mailError.response?.data || mailError.message);
+
+      // Reset token if sending fails
       user.resetPasswordToken = undefined;
       user.resetPasswordExpire = undefined;
       await user.save({ validateBeforeSave: false });
+
+      if (mailError.response && mailError.response.status === 401) {
+        return res.status(401).json({ message: 'שגיאה: מפתח API לא חוקי או שאינו פעיל ב-MailerSend.' });
+      }
+
+      return res.status(500).json({ message: 'שגיאה בשליחת אימייל איפוס סיסמה.' });
     }
-    console.error('שגיאה בשליחת אימייל איפוס סיסמה:', error.message);
-    return res.status(500).json({ message: 'שגיאה בשליחת אימייל איפוס סיסמה.' });
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -193,7 +172,6 @@ const resetPassword = async (req, res, next) => {
 module.exports = {
   registerUser,
   loginUser,
-  deleteUser,
   forgotPassword,
   resetPassword,
 };
