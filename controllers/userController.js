@@ -2,9 +2,9 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const MailerLite = require('@mailerlite/mailerlite-nodejs');
+const MailerLite = require('@mailerlite/mailerlite-nodejs').default;
 
-const mailerlite = MailerLite.init({
+const mailerlite = new MailerLite({
   apiKey: process.env.MAILERLITE_API_KEY, // API Key מ-MailerLite
 });
 
