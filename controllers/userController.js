@@ -125,10 +125,10 @@ const forgotPassword = async (req, res, next) => {
       await axios.post(
         'https://connect.mailerlite.com/api/api/v2/email/send',
         {
-          to: [user.email],
           subject: 'איפוס סיסמה',
+          from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
+          recipients: [{ email: user.email }],
           html: `<p>${message}</p>`,
-          from: process.env.EMAIL_FROM,
         },
         {
           headers: {
