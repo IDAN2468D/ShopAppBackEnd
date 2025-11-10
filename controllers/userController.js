@@ -123,7 +123,7 @@ const forgotPassword = async (req, res, next) => {
     const message = `קיבלת אימייל זה מכיוון שביקשת לאפס את הסיסמה שלך. אנא בקר בקישור הבא: \n\n ${resetURL} \n\n אם לא ביקשת זאת, אנא התעלם מאימייל זה.`;
 
     // Send email via MailerLite SDK
-    await mailerlite.transactionalEmails.send({
+    await mailerlite.email.send({
       subject: 'איפוס סיסמה',
       from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
       to: [{ email: user.email }],
