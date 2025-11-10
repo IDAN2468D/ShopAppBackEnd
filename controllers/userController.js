@@ -72,6 +72,25 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+// @desc    Delete user
+// @route   DELETE /api/users/:id
+// @access  Private
+const deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({ message: 'משתמש לא נמצא.' });
+    }
+
+    await user.deleteOne();
+    res.json({ message: 'המשתמש נמחק בהצלחה.' });
+  } catch (error) {
+    console.error('שגיאה במחיקת משתמש:', error);
+    next(error);
+  }
+};
+
 // @desc    Forgot password using MailerSend API
 // @route   POST /api/users/forgotpassword
 // @access  Public
@@ -169,7 +188,6 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
-console.log('deleteUser type in userController:', typeof deleteUser);
 module.exports = {
   registerUser,
   loginUser,
