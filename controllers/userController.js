@@ -123,7 +123,7 @@ const forgotPassword = async (req, res, next) => {
 
     try {
       await axios.post(
-        'https://api.mailerlite.com/api/v2/email/send',
+        'https://connect.mailerlite.com/api/api/v2/email/send',
         {
           to: [user.email],
           subject: 'איפוס סיסמה',
