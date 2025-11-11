@@ -132,7 +132,7 @@ const forgotPassword = async (req, res, next) => {
 
       res.status(200).json({ success: true, data: 'אימייל נשלח בהצלחה.' });
     } catch (mailError) {
-      console.error('שגיאה בשליחת אימייל איפוס סיסמה:', mailError.response?.data || mailError.message);
+      console.error('שגיאה בשליחת אימייל איפוס סיסמה:', mailError.response?.data || mailError.message, mailError.response);
 
       // טיפול אוטומטי בשגיאת אימות דומיין (#MS42207)
       const errorMessage = mailError.response?.data?.message || '';
