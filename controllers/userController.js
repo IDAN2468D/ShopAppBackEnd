@@ -4,16 +4,14 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const axios = require('axios');
 
-// Generate JWT Token
+// פונקציה ליצירת טוקן JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE,
   });
 };
 
-// @desc    Register new user
-// @route   POST /api/users/register
-// @access  Public
+// ---------------------------- REGISTER ----------------------------
 const registerUser = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
@@ -48,9 +46,7 @@ const registerUser = async (req, res, next) => {
   }
 };
 
-// @desc    Login user
-// @route   POST /api/users/login
-// @access  Public
+// ---------------------------- LOGIN ----------------------------
 const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -72,9 +68,7 @@ const loginUser = async (req, res, next) => {
   }
 };
 
-// @desc    Delete user
-// @route   DELETE /api/users/:id
-// @access  Private
+// ---------------------------- DELETE ----------------------------
 const deleteUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);
@@ -91,19 +85,17 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-// @desc    Forgot password using MailerSend API
-// @route   POST /api/users/forgotpassword
-// @access  Public
+// ---------------------------- FORGOT PASSWORD ----------------------------
 const forgotPassword = async (req, res, next) => {
   try {
     const { email } = req.body;
-
     const user = await User.findOne({ email });
+
     if (!user) {
       return res.status(404).json({ message: 'משתמש לא נמצא עם כתובת אימייל זו.' });
     }
 
-    // Generate reset token
+    // יצירת טוקן איפוס
     const resetToken = crypto.randomBytes(20).toString('hex');
     user.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 דקות
@@ -117,19 +109,22 @@ const forgotPassword = async (req, res, next) => {
       <p>אם לא ביקשת זאת, התעלם מאימייל זה.</p>
     `;
 
-    // Send email via MailerSend API
+    const fromEmail = process.env.EMAIL_FROM || 'noreply@mailersend.net';
+    const fromName = 'האפליקציה שלי';
+
     try {
+      // שליחת האימייל דרך MailerSend
       await axios.post(
         'https://api.mailersend.com/v1/email',
         {
-          from: { email: process.env.EMAIL_FROM, name: 'האפליקציה שלי' },
+          from: { email: fromEmail, name: fromName },
           to: [{ email: user.email }],
           subject: 'איפוס סיסמה',
           html: htmlMessage,
         },
         {
           headers: {
-            'Authorization': `Bearer ${process.env.MAILERSEND_API_KEY}`,
+            Authorization: `Bearer ${process.env.MAILERSEND_API_KEY}`,
             'Content-Type': 'application/json',
           },
         }
@@ -139,7 +134,29 @@ const forgotPassword = async (req, res, next) => {
     } catch (mailError) {
       console.error('שגיאה בשליחת אימייל איפוס סיסמה:', mailError.response?.data || mailError.message);
 
-      // Reset token if sending fails
+      // טיפול אוטומטי בשגיאת אימות דומיין (#MS42207)
+      const errorMessage = mailError.response?.data?.message || '';
+      if (errorMessage.includes('domain must be verified')) {
+        console.log('⚠️ דומיין לא מאומת - ניסיון שליחה עם מייל ברירת מחדל של MailerSend...');
+        await axios.post(
+          'https://api.mailersend.com/v1/email',
+          {
+            from: { email: 'noreply@mailersend.net', name: fromName },
+            to: [{ email: user.email }],
+            subject: 'איפוס סיסמה',
+            html: htmlMessage,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${process.env.MAILERSEND_API_KEY}`,
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+        return res.status(200).json({ success: true, data: 'האימייל נשלח ממייל ברירת מחדל של MailerSend.' });
+      }
+
+      // איפוס טוקן אם נכשלת השליחה
       user.resetPasswordToken = undefined;
       user.resetPasswordExpire = undefined;
       await user.save({ validateBeforeSave: false });
@@ -155,9 +172,7 @@ const forgotPassword = async (req, res, next) => {
   }
 };
 
-// @desc    Reset password
-// @route   PUT /api/users/resetpassword/:resettoken
-// @access  Public
+// ---------------------------- RESET PASSWORD ----------------------------
 const resetPassword = async (req, res, next) => {
   try {
     const resetPasswordToken = crypto.createHash('sha256').update(req.params.resettoken).digest('hex');
@@ -188,6 +203,7 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
+// ---------------------------- EXPORTS ----------------------------
 module.exports = {
   registerUser,
   loginUser,
